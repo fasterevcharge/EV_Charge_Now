@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -5,6 +6,7 @@ import Marquee from "@/components/Marquee";
 import RevealText from "@/components/RevealText";
 import CursorBolt from "@/components/CursorBolt";
 import MagneticButton from "@/components/MagneticButton";
+import Pillars from "@/components/Pillars";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Header floating />
       <Hero />
       <Marquee />
+
+      <Pillars />
 
       <section className="section dark" id="what-we-do">
         <div className="container two-col">
@@ -64,10 +68,14 @@ export default function Home() {
               Connect With an Expert
             </MagneticButton>
           </div>
-          <div className="orb" aria-hidden="true">
-            <div className="orb-core" />
-            <div className="orb-ring" />
-            <div className="orb-ring slow" />
+          <div className="photo-card floating">
+            <Image
+              src="/charger-hardware.jpg"
+              alt="Faster EV Charge Now station"
+              width={900}
+              height={1100}
+              priority={false}
+            />
           </div>
         </div>
       </section>
@@ -84,7 +92,7 @@ export default function Home() {
             </RevealText>
             <ul className="bullet-list">
               <li>Unified EV charge management at any scale.</li>
-              <li>Software beyond OCPP — Waitlist, AI automation, Fleet Ops.</li>
+              <li>Integrated PowerAds digital signage on every station.</li>
               <li>Co-developed technology defining the future.</li>
             </ul>
             <div className="quote-card glass">
@@ -98,7 +106,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="image-card dashboard floating" aria-hidden="true" />
+          <div className="photo-card floating">
+            <Image
+              src="/poweradds-catalog.png"
+              alt="PowerAds integrated digital signage on Faster EV stations"
+              width={1200}
+              height={900}
+            />
+          </div>
         </div>
       </section>
 
@@ -106,43 +121,27 @@ export default function Home() {
         <div className="container two-col reverse">
           <div>
             <RevealText as="h2" className="big">
-              End-to-end reliability
+              Solar-ready, grid-smart.
             </RevealText>
             <RevealText as="p" delay={0.2}>
-              Trust underpins customer success — and we deliver it through
-              complimentary 24/7 driver support and expert guidance for
-              everything from site walks to long-term program optimization.
+              From solar carports to grid-balanced fleet hubs, Faster
+              integrates renewable energy into every deployment — so your
+              stations stay online and your bills stay low.
             </RevealText>
             <ul className="bullet-list">
-              <li>24/7 driver support included.</li>
-              <li>Expert-led site walks and installations.</li>
-              <li>Long-term program optimization.</li>
+              <li>Solar-integrated carports and canopies.</li>
+              <li>Battery-buffered fast charging.</li>
+              <li>Smart load management across the site.</li>
             </ul>
           </div>
-          <div className="image-card fleet floating" aria-hidden="true" />
-        </div>
-      </section>
-
-      <section className="section dark driver">
-        <div className="container two-col">
-          <div>
-            <RevealText as="h2" className="big">
-              World-class driver experience
-            </RevealText>
-            <RevealText as="p" delay={0.2}>
-              Connect with EV drivers when they want to charge. Reach millions
-              of drivers via our mobile app and in-dash integrations.
-            </RevealText>
-            <div className="hero-ctas">
-              <MagneticButton href="#app" className="cta-magnetic small">
-                Get the App
-              </MagneticButton>
-              <a href="#stations" className="cta-ghost">
-                Find Stations →
-              </a>
-            </div>
+          <div className="photo-card floating">
+            <Image
+              src="/solar-carport.png"
+              alt="Solar carport with EV chargers"
+              width={1200}
+              height={800}
+            />
           </div>
-          <div className="image-card charger floating" aria-hidden="true" />
         </div>
       </section>
 
