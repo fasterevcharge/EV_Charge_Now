@@ -465,6 +465,120 @@ h2.reveal-text {
   pointer-events: none;
 }
 
+/* ---------- Parallax full-bleed ---------- */
+.parallax-section {
+  position: relative; width: 100%; overflow: hidden;
+  display: flex; align-items: center;
+  isolation: isolate;
+}
+.parallax-image-wrap {
+  position: absolute; inset: -10% 0; z-index: -1;
+}
+.parallax-image-wrap img { object-fit: cover; }
+.parallax-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.1) 100%),
+    linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.6) 100%);
+}
+.parallax-content {
+  position: relative; z-index: 2;
+  max-width: 640px; padding: 0 60px;
+  color: #fff;
+}
+.parallax-content.align-right {
+  margin-left: auto; padding-right: 80px;
+  text-align: right;
+}
+.parallax-content.align-center {
+  margin: 0 auto; text-align: center; padding: 0 24px;
+}
+.parallax-eyebrow {
+  display: inline-block; color: var(--accent); font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase; font-size: 13px;
+  margin-bottom: 22px;
+}
+.parallax-title {
+  font-size: clamp(48px, 7vw, 110px);
+  font-weight: 900; letter-spacing: -0.035em; line-height: 0.95;
+  margin: 0 0 24px;
+  text-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+.parallax-title em {
+  font-style: italic; color: var(--accent);
+  font-weight: 900;
+  text-shadow: 0 0 40px rgba(245,197,24,0.4);
+}
+.parallax-sub {
+  font-size: 19px; max-width: 480px; color: #e5e7eb;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+.parallax-content.align-right .parallax-sub { margin-left: auto; }
+
+/* Parallax sections — when right-aligned, flip overlay gradient */
+.parallax-section:has(.align-right) .parallax-overlay {
+  background:
+    linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.1) 100%),
+    linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.6) 100%);
+}
+
+/* ---------- Reveal image (masked) ---------- */
+.reveal-image {
+  position: relative; width: 100%;
+}
+.reveal-image-mask {
+  position: relative; border-radius: 18px; overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line);
+}
+.reveal-image-inner { display: block; }
+.reveal-image-inner img {
+  width: 100%; height: auto; display: block;
+}
+.reveal-image.floating { animation: float 6s ease-in-out infinite; }
+.reveal-image.full .reveal-image-mask { border-radius: 24px; }
+.reveal-image-caption {
+  position: absolute; left: 18px; bottom: 18px; z-index: 3;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px; letter-spacing: 0.18em;
+  color: var(--accent); background: rgba(0,0,0,0.55);
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid rgba(245,197,24,0.35);
+  backdrop-filter: blur(6px);
+}
+
+/* Center-aligned section header */
+.section-header { text-align: center; margin-bottom: 60px; }
+.reveal-text.center { text-align: center; margin-left: auto; margin-right: auto; max-width: 900px; }
+
+/* ---------- App showcase ---------- */
+.app-showcase {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: center;
+}
+.app-features { display: flex; flex-direction: column; gap: 28px; }
+.app-feature {
+  position: relative; padding: 24px 24px 24px 72px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line); border-radius: 14px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.app-feature:hover {
+  background: rgba(245, 197, 24, 0.05);
+  border-color: var(--accent);
+  transform: translateX(6px);
+}
+.app-feature-num {
+  position: absolute; left: 22px; top: 24px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 14px; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.app-feature h3 {
+  margin: 0 0 6px; font-size: 18px; font-weight: 800;
+  letter-spacing: -0.01em; color: var(--text);
+}
+.app-feature p { margin: 0; font-size: 14px; color: var(--text-2); line-height: 1.6; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .primary-nav { display: none; }
@@ -476,6 +590,10 @@ h2.reveal-text {
   .section { padding: 80px 0; }
   .stat-grid { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
+  .parallax-content { padding: 0 24px; }
+  .parallax-content.align-right { padding-right: 24px; text-align: left; }
+  .parallax-content.align-right .parallax-sub { margin-left: 0; }
+  .app-showcase { grid-template-columns: 1fr; gap: 40px; }
 }
 @media (min-width: 600px) and (max-width: 900px) {
   .pillars-grid { grid-template-columns: 1fr 1fr; }

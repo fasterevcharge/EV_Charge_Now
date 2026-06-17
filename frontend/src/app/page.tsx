@@ -1,12 +1,13 @@
-import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import RevealText from "@/components/RevealText";
+import RevealImage from "@/components/RevealImage";
 import CursorBolt from "@/components/CursorBolt";
 import MagneticButton from "@/components/MagneticButton";
 import Pillars from "@/components/Pillars";
+import Parallax from "@/components/Parallax";
 
 export default function Home() {
   return (
@@ -15,6 +16,24 @@ export default function Home() {
       <Header floating />
       <Hero />
       <Marquee />
+
+      {/* Full-bleed parallax showcase — night station hero shot */}
+      <Parallax
+        src="/station-night.png"
+        alt="Faster EV Charge Now station at night"
+        height="100vh"
+        align="left"
+      >
+        <span className="parallax-eyebrow">⚡ A new kind of station</span>
+        <h2 className="parallax-title">
+          Pull in. <em>Plug in.</em><br />
+          Power on.
+        </h2>
+        <p className="parallax-sub">
+          Branded, signal-rich charging hubs designed to feel as premium as the
+          cars they fuel.
+        </p>
+      </Parallax>
 
       <Pillars />
 
@@ -52,53 +71,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section dark" id="how-we-work">
-        <div className="container two-col reverse">
-          <div>
-            <span className="eyebrow">⚡ How we work with you</span>
-            <RevealText as="h2" className="big">
-              We are charging solution enablers.
-            </RevealText>
-            <RevealText as="p" delay={0.2}>
-              Whether you’re looking to attract drivers, operate a fleet at peak
-              efficiency, or build a charging business of your own — we help you
-              deliver a world-class EV charging program.
-            </RevealText>
-            <MagneticButton href="#contact" className="cta-magnetic small">
-              Connect With an Expert
-            </MagneticButton>
-          </div>
-          <div className="photo-card floating">
-            <Image
-              src="/charger-hardware.jpg"
-              alt="Faster EV Charge Now station"
-              width={900}
-              height={1100}
-              priority={false}
-            />
-          </div>
-        </div>
-      </section>
-
+      {/* Innovation — digital signage image with masked reveal */}
       <section className="section dark innovation">
         <div className="container two-col">
           <div>
+            <span className="eyebrow">⚡ PowerAds Signage</span>
             <RevealText as="h2" className="big">
-              Innovation at our core
+              Every station is a billboard.
             </RevealText>
             <RevealText as="p" delay={0.2}>
-              We engineer the most advanced EVSE technology from the ground up —
-              fully integrated systems optimized for performance and value.
+              Integrated digital signage shows live station status, energy
+              delivered, and CO₂ avoided — turning every charge into a story
+              drivers and brands love.
             </RevealText>
             <ul className="bullet-list">
-              <li>Unified EV charge management at any scale.</li>
-              <li>Integrated PowerAds digital signage on every station.</li>
-              <li>Co-developed technology defining the future.</li>
+              <li>Live station metrics displayed station-side.</li>
+              <li>Premium ad surface for sponsors and partners.</li>
+              <li>Drivers see impact data in real time.</li>
             </ul>
             <div className="quote-card glass">
               <p>
-                “It’s amazing to log in, pull the metrics I want, and see live
-                data on our entire portfolio of stations.”
+                “Drivers stop. They look. They engage. That’s a whole new
+                channel on top of the energy business.”
               </p>
               <div className="quote-author">
                 <strong>Laurie LeLuck</strong>
@@ -106,41 +100,68 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="photo-card floating">
-            <Image
-              src="/poweradds-catalog.png"
-              alt="PowerAds integrated digital signage on Faster EV stations"
-              width={1200}
-              height={900}
-            />
-          </div>
+          <RevealImage
+            src="/station-signage.png"
+            alt="Faster station with PowerAds digital signage showing live stats"
+            width={1400}
+            height={900}
+            className="floating"
+            caption="LIVE · STATION 04 · 82% CHARGED"
+          />
         </div>
       </section>
 
-      <section className="section dark reliability">
-        <div className="container two-col reverse">
-          <div>
-            <RevealText as="h2" className="big">
-              Solar-ready, grid-smart.
+      {/* Solar canopy parallax */}
+      <Parallax
+        src="/solar-canopy.png"
+        alt="Solar canopy charging station at golden hour"
+        height="90vh"
+        align="right"
+      >
+        <span className="parallax-eyebrow">⚡ Solar-Ready</span>
+        <h2 className="parallax-title">
+          Powered by <em>the sun.</em><br />
+          Buffered by the grid.
+        </h2>
+        <p className="parallax-sub">
+          Solar carports, battery storage, and smart load management — clean
+          energy that keeps the meter spinning the right direction.
+        </p>
+      </Parallax>
+
+      <section className="section dark" id="features">
+        <div className="container">
+          <div className="section-header">
+            <span className="eyebrow">⚡ Built around drivers</span>
+            <RevealText as="h2" className="big center">
+              Find a station. Start a charge. Pay in seconds.
             </RevealText>
-            <RevealText as="p" delay={0.2}>
-              From solar carports to grid-balanced fleet hubs, Faster
-              integrates renewable energy into every deployment — so your
-              stations stay online and your bills stay low.
-            </RevealText>
-            <ul className="bullet-list">
-              <li>Solar-integrated carports and canopies.</li>
-              <li>Battery-buffered fast charging.</li>
-              <li>Smart load management across the site.</li>
-            </ul>
           </div>
-          <div className="photo-card floating">
-            <Image
-              src="/solar-carport.png"
-              alt="Solar carport with EV chargers"
-              width={1200}
-              height={800}
+          <div className="app-showcase">
+            <RevealImage
+              src="/app-mockup.png"
+              alt="Faster app interface alongside a real station — find stations, fleet intelligence, seamless charging"
+              width={1600}
+              height={1100}
+              className="full"
             />
+            <div className="app-features">
+              <div className="app-feature">
+                <span className="app-feature-num">01</span>
+                <h3>Find Stations</h3>
+                <p>Locate high-speed chargers in real time, nationwide.</p>
+              </div>
+              <div className="app-feature">
+                <span className="app-feature-num">02</span>
+                <h3>Fleet Intelligence</h3>
+                <p>Track energy, sessions, and spend across your fleet.</p>
+              </div>
+              <div className="app-feature">
+                <span className="app-feature-num">03</span>
+                <h3>Seamless Charging</h3>
+                <p>Start, pay, and manage from one powerful app.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
