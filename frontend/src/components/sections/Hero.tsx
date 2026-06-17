@@ -3,7 +3,8 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import VideoBackground from "./VideoBackground";
-import MagneticButton from "./MagneticButton";
+import MagneticButton from "@/components/motion/MagneticButton";
+import { brand, home } from "@/content/site";
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -18,14 +19,6 @@ export default function Hero() {
   return (
     <section className="hero-cinema" ref={ref}>
       <VideoBackground src="/hero.mp4" />
-
-      <motion.div className="hero-top" style={{ opacity }}>
-        <nav className="hero-nav">
-          <a href="#about">ABOUT</a>
-          <a href="#play">PLAY</a>
-          <a href="#contact">CONTACT</a>
-        </nav>
-      </motion.div>
 
       <motion.div className="hero-center" style={{ y, opacity, scale }}>
         <motion.h1
@@ -52,18 +45,31 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8 }}
         >
-          EV CHARGE NOW
+          {brand.tagline}
         </motion.p>
+
+        <motion.div
+          className="hero-headline-wrap"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.05, duration: 0.8 }}
+        >
+          <h2 className="hero-headline">{home.hero.title}</h2>
+          <p className="hero-sub">{home.hero.subtitle}</p>
+        </motion.div>
 
         <motion.div
           className="hero-cta-wrap"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.1, duration: 0.8 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <MagneticButton href="#contact" className="cta-magnetic">
-            Charge Now
+          <MagneticButton href={home.hero.primaryCta.href} className="cta-magnetic">
+            {home.hero.primaryCta.label}
           </MagneticButton>
+          <a href={home.hero.secondaryCta.href} className="cta-ghost">
+            {home.hero.secondaryCta.label} →
+          </a>
         </motion.div>
       </motion.div>
 

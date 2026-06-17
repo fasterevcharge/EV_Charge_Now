@@ -579,6 +579,185 @@ h2.reveal-text {
 }
 .app-feature p { margin: 0; font-size: 14px; color: var(--text-2); line-height: 1.6; }
 
+/* ---------- Container variants ---------- */
+.container.narrow { max-width: 880px; }
+
+/* ---------- Section header center alignment ---------- */
+.section-header.center { text-align: center; margin-bottom: 60px; }
+
+/* ---------- Hero headline (homepage, under wordmark) ---------- */
+.hero-headline-wrap { max-width: 760px; margin: 32px auto 36px; }
+.hero-headline {
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 700; line-height: 1.2; margin: 0 0 16px;
+  color: #fff; letter-spacing: -0.01em;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.6);
+}
+.hero-sub {
+  font-size: clamp(15px, 1.4vw, 18px);
+  color: #d8dadf; line-height: 1.6; margin: 0;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+/* ---------- Page hero (inner pages) ---------- */
+.page-hero {
+  position: relative; min-height: 70vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 140px 0 100px;
+  isolation: isolate; overflow: hidden;
+  background:
+    radial-gradient(60% 50% at 50% 30%, rgba(245,197,24,0.12), transparent 70%),
+    var(--black);
+}
+.page-hero-bg { position: absolute; inset: 0; z-index: -2; }
+.page-hero-bg img { object-fit: cover; }
+.page-hero-overlay {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%);
+}
+.page-hero-inner { max-width: 900px; }
+.page-hero-title {
+  font-size: clamp(40px, 6vw, 88px);
+  font-weight: 900; letter-spacing: -0.03em; line-height: 1.02;
+  margin: 16px 0 22px; color: #fff;
+  text-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+.page-hero-sub {
+  font-size: clamp(16px, 1.6vw, 20px); color: var(--text-2);
+  max-width: 720px; margin: 0 auto 36px;
+}
+.page-hero-ctas {
+  display: inline-flex; gap: 22px; align-items: center; flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- Feature grid (generic replacement for pillars-grid) ---------- */
+.feature-grid-section { padding: 140px 0; background: linear-gradient(180deg, var(--ink) 0%, var(--black) 100%); }
+.feature-grid { display: grid; gap: 24px; }
+.feature-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.feature-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.feature-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.feature-card {
+  position: relative; padding: 36px 28px 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 18px; overflow: hidden;
+  transition: background 0.3s, border-color 0.3s;
+}
+.feature-card:hover {
+  background: rgba(245, 197, 24, 0.05);
+  border-color: var(--accent);
+}
+.feature-icon {
+  width: 56px; height: 56px; color: var(--accent);
+  display: grid; place-items: center;
+  border-radius: 14px;
+  background: rgba(245, 197, 24, 0.1);
+  border: 1px solid rgba(245, 197, 24, 0.25);
+  margin-bottom: 22px;
+}
+.feature-icon svg { width: 28px; height: 28px; }
+.feature-card h3 {
+  font-size: 22px; font-weight: 800; letter-spacing: -0.01em;
+  margin: 0 0 10px; color: var(--text);
+}
+.feature-card p { font-size: 14px; color: var(--text-2); margin: 0; line-height: 1.6; }
+.feature-num {
+  position: absolute; top: 22px; right: 26px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px; letter-spacing: 0.2em; color: var(--text-3);
+  font-weight: 700;
+}
+
+/* ---------- Two-sides grid (drivers vs property owners) ---------- */
+.two-sides-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+}
+.two-sides-card {
+  display: block; padding: 48px 40px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid var(--line); border-radius: 20px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+  color: var(--text);
+}
+.two-sides-card:hover {
+  background: rgba(245, 197, 24, 0.06);
+  border-color: var(--accent);
+  transform: translateY(-6px);
+}
+.two-sides-card h3 {
+  font-size: 32px; font-weight: 900; letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+.two-sides-card p { color: var(--text-2); font-size: 17px; margin: 0 0 24px; }
+.card-cta {
+  display: inline-block; color: var(--accent);
+  font-weight: 700; font-size: 13px; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 4px;
+}
+
+/* ---------- Overlap grid (drivers page) ---------- */
+.overlap-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.overlap-card {
+  padding: 40px 28px; border-radius: 18px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--line);
+  text-align: left;
+}
+.overlap-range {
+  display: block; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 13px; letter-spacing: 0.18em; color: var(--accent);
+  text-transform: uppercase; margin-bottom: 14px;
+}
+.overlap-card p { margin: 0; color: var(--text-2); font-size: 16px; }
+
+/* ---------- Content block ---------- */
+.content-block.align-center { text-align: center; }
+.content-block.align-center .bullet-list li { text-align: left; max-width: 480px; margin-left: auto; margin-right: auto; }
+.story-paragraphs { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
+.story-paragraphs p { color: var(--text-2); font-size: 17px; }
+
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+  margin-bottom: 64px;
+}
+.contact-card {
+  padding: 40px 36px; border-radius: 20px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--line);
+  transition: background 0.3s, border-color 0.3s;
+}
+.contact-card:hover { background: rgba(245,197,24,0.05); border-color: var(--accent); }
+.contact-card h3 { font-size: 26px; font-weight: 800; margin: 0 0 14px; letter-spacing: -0.01em; }
+.contact-card p { color: var(--text-2); font-size: 16px; margin: 0 0 28px; line-height: 1.6; }
+.contact-card .cta-magnetic.small {
+  display: inline-block;
+  padding: 14px 26px; font-size: 12px; letter-spacing: 0.16em;
+  text-transform: uppercase; font-weight: 800;
+  background: var(--accent); color: var(--ink);
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+.contact-card .cta-magnetic.small:hover { background: var(--accent-2); }
+
+.contact-email-band {
+  text-align: center; padding: 48px 0;
+  border-top: 1px solid var(--line);
+}
+.contact-email {
+  display: inline-block; margin-top: 12px;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900; letter-spacing: -0.02em;
+  color: var(--accent);
+  transition: opacity 0.2s;
+}
+.contact-email:hover { opacity: 0.8; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .primary-nav { display: none; }
@@ -594,6 +773,16 @@ h2.reveal-text {
   .parallax-content.align-right { padding-right: 24px; text-align: left; }
   .parallax-content.align-right .parallax-sub { margin-left: 0; }
   .app-showcase { grid-template-columns: 1fr; gap: 40px; }
+  .feature-grid.cols-2,
+  .feature-grid.cols-3,
+  .feature-grid.cols-4 { grid-template-columns: 1fr; }
+  .two-sides-grid { grid-template-columns: 1fr; }
+  .overlap-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .feature-grid.cols-3,
+  .feature-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 600px) and (max-width: 900px) {
   .pillars-grid { grid-template-columns: 1fr 1fr; }

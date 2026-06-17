@@ -1,21 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
-
-const ITEMS = [
-  "⚡ 250 KW DC FAST",
-  "24/7 DRIVER SUPPORT",
-  "AI-POWERED FLEET OPS",
-  "NATIONWIDE NETWORK",
-  "OCPP COMPLIANT",
-  "ZERO-DOWNTIME UPTIME",
-  "REAL-TIME ANALYTICS",
-];
+import { ticker } from "@/content/site";
 
 export default function Marquee() {
-  const loop = [...ITEMS, ...ITEMS];
+  const loop = [...ticker, ...ticker];
   return (
-    <div className="marquee">
+    <div className="marquee" aria-hidden="true">
       <motion.div
         className="marquee-track"
         animate={{ x: ["0%", "-50%"] }}

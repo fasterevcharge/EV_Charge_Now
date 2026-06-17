@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { brand, home } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Faster EV Charge Now",
-  description:
-    "Faster EV Charge Now — your all-in-one partner in EV charging. Deploy a charging solution that fits your organizational goals.",
+  title: `${brand.name} — Charging Infrastructure for Everyday Destinations`,
+  description: home.hero.subtitle,
 };
 
 export default function RootLayout({
