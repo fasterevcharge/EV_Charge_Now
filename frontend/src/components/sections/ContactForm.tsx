@@ -36,20 +36,27 @@ export default function ContactForm() {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: `New ${data.inquiryType} inquiry — ${data.subject}`,
+          from_name: `EV ChargeNow Website — ${data.name || "Visitor"}`,
+          ...data,
+        }),
       });
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body.error || "Something went wrong. Please try again.");
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok || !body.success) {
+        throw new Error(
+          body.message || "We couldn't send your message right now. Please try again."
+        );
       }
       setStatus("success");
       form.reset();
       setType(TYPES[0]);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong.");
+    } catch {
+      setError("We couldn't send your message right now. Please try again.");
       setStatus("error");
     }
   }
@@ -76,6 +83,15 @@ export default function ContactForm() {
 
   return (
     <form className="intake-form" onSubmit={handleSubmit}>
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        style={{ display: "none" }}
+        aria-hidden="true"
+      />
+
       <label className="intake-field">
         <span className="intake-label">Inquiry Type *</span>
         <select

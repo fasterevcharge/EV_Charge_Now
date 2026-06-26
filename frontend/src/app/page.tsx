@@ -1,7 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Marquee from "@/components/layout/Marquee";
-import CursorBolt from "@/components/layout/CursorBolt";
 
 import Hero from "@/components/sections/Hero";
 import Pillars from "@/components/sections/Pillars";
@@ -16,7 +15,6 @@ import { home } from "@/content/site";
 export default function HomePage() {
   return (
     <>
-      <CursorBolt />
       <Header floating />
       <Hero />
       <Marquee />

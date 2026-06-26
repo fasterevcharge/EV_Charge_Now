@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import CursorBolt from "./CursorBolt";
 
 /**
  * Standard inner-page shell: cursor effect, sticky header, content, footer.
@@ -9,7 +8,6 @@ import CursorBolt from "./CursorBolt";
 export default function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <CursorBolt />
       <Header />
       <main>{children}</main>
       <Footer />
