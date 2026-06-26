@@ -26,7 +26,7 @@ export default function Header({ floating = false }: Props) {
           ))}
         </nav>
 
-        <Link href="/contact" className="cta-outline light">
+        <Link href="/get-in-touch" className="cta-outline light">
           Get in Touch
         </Link>
       </div>

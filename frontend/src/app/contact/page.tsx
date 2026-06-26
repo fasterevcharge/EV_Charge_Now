@@ -33,8 +33,11 @@ export default function ContactPage() {
 
           <div className="contact-email-band">
             <span className="eyebrow">⚡ Direct line</span>
-            <a href={`mailto:${contact.email}`} className="contact-email">
-              {contact.email}
+            <p className="contact-email-prompt">
+              Send us a message and our team will get back to you.
+            </p>
+            <a href="/get-in-touch" className="cta-magnetic">
+              Get in Touch
             </a>
           </div>
         </div>

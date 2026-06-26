@@ -5,7 +5,7 @@ import ContentBlock from "@/components/sections/ContentBlock";
 import SplitSection from "@/components/sections/SplitSection";
 import CTABand from "@/components/sections/CTABand";
 import RevealText from "@/components/motion/RevealText";
-import { about, contact } from "@/content/site";
+import { about } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "About — EV ChargeNow",
@@ -57,7 +57,7 @@ export default function AboutPage() {
 
       <CTABand
         title="Help us build the network."
-        cta={{ label: "Contact Our Team", href: `mailto:${contact.email}` }}
+        cta={{ label: "Get in Touch", href: "/get-in-touch" }}
       />
     </PageShell>
   );

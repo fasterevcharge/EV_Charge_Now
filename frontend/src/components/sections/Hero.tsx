@@ -67,9 +67,6 @@ export default function Hero() {
           <MagneticButton href={home.hero.primaryCta.href} className="cta-magnetic">
             {home.hero.primaryCta.label}
           </MagneticButton>
-          <a href={home.hero.secondaryCta.href} className="cta-ghost">
-            {home.hero.secondaryCta.label} →
-          </a>
         </motion.div>
       </motion.div>
 

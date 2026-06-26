@@ -6,7 +6,7 @@ import ContentBlock from "@/components/sections/ContentBlock";
 import FeatureGrid from "@/components/sections/FeatureGrid";
 import CTABand from "@/components/sections/CTABand";
 import Marquee from "@/components/layout/Marquee";
-import { drivers, contact } from "@/content/site";
+import { drivers } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Drivers — EV ChargeNow",
@@ -20,7 +20,6 @@ export default function DriversPage() {
         eyebrow={drivers.hero.eyebrow}
         title={drivers.hero.title}
         subtitle={drivers.hero.subtitle}
-        primaryCta={drivers.hero.primaryCta}
         backgroundImage="/station-night.png"
         backgroundAlt="EV ChargeNow station at night"
       />
@@ -45,17 +44,6 @@ export default function DriversPage() {
           body={drivers.fast.body}
         />
       </SplitSection>
-
-      <section className="section dark">
-        <div className="container narrow">
-          <ContentBlock
-            align="center"
-            eyebrow={drivers.noBarriers.eyebrow}
-            title={drivers.noBarriers.title}
-            body={drivers.noBarriers.body}
-          />
-        </div>
-      </section>
 
       <FeatureGrid
         eyebrow={drivers.benefits.eyebrow}
@@ -91,9 +79,9 @@ export default function DriversPage() {
       </section>
 
       <CTABand
-        title="Find a station near you."
-        body="Locate fast, convenient charging at the places you already visit."
-        cta={{ label: "Contact Our Team", href: `mailto:${contact.email}` }}
+        title="Charge where your life happens."
+        body="Have a question or want to learn more? Our team is here to help."
+        cta={{ label: "Get in Touch", href: "/get-in-touch?type=Driver+Support" }}
       />
     </PageShell>
   );

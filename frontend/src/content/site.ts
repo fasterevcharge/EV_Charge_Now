@@ -27,8 +27,7 @@ export const home = {
     title: "Charging Infrastructure for Everyday Destinations.",
     subtitle:
       "EV ChargeNow delivers fast, reliable electric vehicle charging where people already live, work, shop, and gather — transforming underutilized parking assets into valuable community infrastructure.",
-    primaryCta: { label: "Find Charging", href: "/drivers" },
-    secondaryCta: { label: "Partner With Us", href: "/property-owners" },
+    primaryCta: { label: "Partner With Us", href: "/property-owners" },
   },
   simple: {
     eyebrow: "⚡ Charging Made Simple",
@@ -87,7 +86,6 @@ export const drivers = {
     title: "Fast, Convenient Charging.",
     subtitle:
       "Charge your vehicle while you shop, dine, work, or run errands. EV ChargeNow makes charging a natural part of your day.",
-    primaryCta: { label: "Find Stations", href: "#stations" },
   },
   whereLife: {
     eyebrow: "⚡ Where life happens",
@@ -100,11 +98,6 @@ export const drivers = {
     title: "Fast Charging That Fits Your Schedule.",
     body:
       "Our chargers deliver up to 320 kilowatts of charging power, allowing many compatible electric vehicles to reach 80% charge in approximately 30 minutes.",
-  },
-  noBarriers: {
-    eyebrow: "⚡ No barriers",
-    title: "No App. No Membership. No Account Required.",
-    body: "Charging should be simple. Plug in. Tap to pay. Start charging. That's it.",
   },
   benefits: {
     eyebrow: "⚡ Four Benefits",
@@ -157,7 +150,7 @@ export const propertyOwners = {
     title: "Turn Parking Into Revenue Infrastructure.",
     subtitle:
       "EV ChargeNow helps property owners convert underutilized parking assets into long-term revenue opportunities while enhancing property attractiveness for tenants and visitors.",
-    primaryCta: { label: "Partner With Us", href: "/contact" },
+    primaryCta: { label: "Partner With Us", href: "/get-in-touch?type=Property+Owner+%26+Site+Host+Partnership" },
   },
   benefits: [
     {
@@ -251,17 +244,71 @@ export const contact = {
   },
   cards: [
     {
-      title: "Property Owners",
+      title: "Property Owners & Site Hosts",
       body: "Interested in bringing electric vehicle charging to your property? Our team can evaluate your site and discuss partnership opportunities, infrastructure requirements, and potential revenue models.",
-      cta: { label: "Partner With Us", href: `mailto:${brand.email}?subject=Property%20Partnership%20Inquiry` },
+      cta: { label: "Partner With Us", href: "/get-in-touch?type=Property+Owner+%26+Site+Host+Partnership" },
+    },
+    {
+      title: "Driver Support",
+      body: "Questions about charging your vehicle, locating stations, payments, or your charging experience? Our team is here to help.",
+      cta: { label: "Get Driver Support", href: "/get-in-touch?type=Driver+Support" },
+    },
+    {
+      title: "Maintenance & Support",
+      body: "Need to report a station issue or request technical assistance? Reach our maintenance and support team directly.",
+      cta: { label: "Request Support", href: "/get-in-touch?type=Maintenance+%26+Technical+Support" },
+    },
+    {
+      title: "Business Partnerships",
+      body: "Exploring investment, strategic partnership, or development opportunities with EV ChargeNow? Let's connect.",
+      cta: { label: "Start a Conversation", href: "/get-in-touch?type=Investor+%26+Strategic+Partnership" },
+    },
+    {
+      title: "Media & Community Relations",
+      body: "Press inquiries, community programs, and partnership opportunities with local organizations and stakeholders.",
+      cta: { label: "Reach Our Team", href: "/get-in-touch?type=Media+%26+Community+Relations" },
     },
     {
       title: "General Inquiries",
-      body: "Questions about EV ChargeNow, future locations, or partnership opportunities? We'll get back to you.",
-      cta: { label: "Contact Our Team", href: `mailto:${brand.email}` },
+      body: "Questions about EV ChargeNow, future locations, or anything else? We'll get back to you.",
+      cta: { label: "Contact Our Team", href: "/get-in-touch?type=General+Question" },
     },
   ],
   email: brand.email,
+} as const;
+
+// -----------------------------------------------------------------------------
+// GET IN TOUCH — hidden intake form
+// -----------------------------------------------------------------------------
+export const inquiry = {
+  hero: {
+    eyebrow: "⚡ Get in touch",
+    title: "How Can We Help?",
+    subtitle:
+      "We're here to help. Whether you're looking to host EV charging, need support, or want to learn more about EV ChargeNow, we'd love to hear from you.",
+  },
+  types: [
+    "Property Owner & Site Host Partnership",
+    "Driver Support",
+    "Maintenance & Technical Support",
+    "Investor & Strategic Partnership",
+    "Media & Community Relations",
+    "General Question",
+  ],
+  // Default field guidance; overridden when the Property Owner type is selected
+  // to subtly capture the details the acquisition team needs.
+  placeholders: {
+    default: {
+      subject: 'Example: "Interested in EV charging for a shopping center"',
+      message: "How can we help you?",
+    },
+    propertyOwner: {
+      subject: 'Example: "Retail center with 250 parking spaces in Torrance"',
+      message:
+        "Tell us about your property, number of parking spaces, location, and any questions you have about hosting EV charging",
+    },
+  },
+  propertyOwnerType: "Property Owner & Site Host Partnership",
 } as const;
 
 // -----------------------------------------------------------------------------

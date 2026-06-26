@@ -11,7 +11,7 @@ import CTABand from "@/components/sections/CTABand";
 
 import Parallax from "@/components/motion/Parallax";
 
-import { home, contact } from "@/content/site";
+import { home } from "@/content/site";
 
 export default function HomePage() {
   return (
@@ -99,7 +99,7 @@ export default function HomePage() {
       <CTABand
         title="Ready to charge faster?"
         body="Whether you drive, host, or partner — EV ChargeNow makes it simple."
-        cta={{ label: "Contact Our Team", href: `mailto:${contact.email}` }}
+        cta={{ label: "Get in Touch", href: "/get-in-touch" }}
       />
 
       <Footer />

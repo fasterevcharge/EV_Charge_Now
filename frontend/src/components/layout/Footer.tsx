@@ -24,7 +24,10 @@ const columns = [
   },
   {
     title: "Contact",
-    links: [{ label: contact.email, href: `mailto:${contact.email}` }],
+    links: [
+      { label: "Get in Touch", href: "/get-in-touch" },
+      { label: contact.email, href: "/get-in-touch" },
+    ],
   },
 ];
 

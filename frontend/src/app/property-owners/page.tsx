@@ -5,7 +5,7 @@ import SplitSection from "@/components/sections/SplitSection";
 import ContentBlock from "@/components/sections/ContentBlock";
 import CTABand from "@/components/sections/CTABand";
 import Marquee from "@/components/layout/Marquee";
-import { propertyOwners, contact } from "@/content/site";
+import { propertyOwners } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Property Owners — EV ChargeNow",
@@ -86,7 +86,7 @@ export default function PropertyOwnersPage() {
 
       <CTABand
         title={propertyOwners.closing}
-        cta={{ label: "Partner With Us", href: `mailto:${contact.email}?subject=Property%20Partnership%20Inquiry` }}
+        cta={{ label: "Partner With Us", href: "/get-in-touch?type=Property+Owner+%26+Site+Host+Partnership" }}
       />
     </PageShell>
   );
