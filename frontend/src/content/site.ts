@@ -8,7 +8,7 @@ export const brand = {
   name: "EV ChargeNow",
   wordmark: "FASTER",        // visual wordmark in hero
   tagline: "EV CHARGE NOW",  // wordmark subtitle
-  email: "evchargenow@gmail.com",
+  email: "info@fasterevchargenow.com",
 } as const;
 
 export const nav = [
@@ -41,9 +41,9 @@ export const home = {
   },
   fast: {
     eyebrow: "⚡ Fast Charging When You Need It",
-    title: "Up to 320 kW. 0–80% in about 30 minutes.",
+    title: "Up to 360 kW. 0–80% in about 22 minutes.",
     body:
-      "Our chargers deliver up to 320 kilowatts of power, allowing many compatible electric vehicles to charge from 0–80% in approximately 30 minutes. Spend less time waiting and more time getting where you need to go.",
+      "Our chargers deliver up to 360 kW of power, allowing many compatible electric vehicles to charge from 0–80% in approximately 22 minutes. Spend less time waiting and more time getting where you need to go.",
   },
   twoSides: {
     eyebrow: "⚡ Built for both sides",
@@ -97,7 +97,7 @@ export const drivers = {
     eyebrow: "⚡ Fast Charging",
     title: "Fast Charging That Fits Your Schedule.",
     body:
-      "Our chargers deliver up to 320 kilowatts of charging power, allowing many compatible electric vehicles to reach 80% charge in approximately 30 minutes.",
+      "Our chargers deliver up to 360 kW of charging power, allowing many compatible electric vehicles to reach 80% charge in approximately 22 minutes.",
   },
   benefits: {
     eyebrow: "⚡ Four Benefits",
@@ -105,7 +105,7 @@ export const drivers = {
     items: [
       {
         title: "Performance Without Wait",
-        body: "Up to 320 kilowatts of fast charging power designed for speed and reliability.",
+        body: "Up to 360 kW of fast charging power designed for speed and reliability.",
       },
       {
         title: "Charging Where Life Happens",
@@ -315,10 +315,10 @@ export const inquiry = {
 // Marquee ticker items (shared across pages)
 // -----------------------------------------------------------------------------
 export const ticker = [
-  "320 KW FAST CHARGE",
+  "360 kW FAST CHARGE",
   "NO APP REQUIRED",
   "TAP TO PAY",
-  "0–80% IN ~30 MIN",
+  "0–80% IN ~22 MIN",
   "COMMUNITY-CENTERED",
   "BROAD EV COMPATIBILITY",
 ] as const;

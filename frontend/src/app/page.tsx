@@ -39,8 +39,8 @@ export default function HomePage() {
       >
         <span className="parallax-eyebrow">{home.fast.eyebrow}</span>
         <h2 className="parallax-title">
-          Up to <em>320 kW.</em><br />
-          0–80% in 30 min.
+          Up to <em>360 kW.</em><br />
+          0–80% in 22 min.
         </h2>
         <p className="parallax-sub">{home.fast.body}</p>
       </Parallax>

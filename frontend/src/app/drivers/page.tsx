@@ -36,7 +36,7 @@ export default function DriversPage() {
 
       <SplitSection
         reverse
-        image={{ src: "/station-signage.png", alt: "Fast 320kW charging" }}
+        image={{ src: "/station-signage.png", alt: "Fast 360 kW charging" }}
       >
         <ContentBlock
           eyebrow={drivers.fast.eyebrow}

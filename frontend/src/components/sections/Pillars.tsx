@@ -54,7 +54,7 @@ const ICONS: Record<string, React.ReactNode> = {
 const PILLARS: FeatureItem[] = [
   {
     title: "Fast Charging",
-    body: "Up to 320 kW — 0–80% in about 30 minutes on compatible vehicles.",
+    body: "Up to 360 kW — 0–80% in about 22 minutes on compatible vehicles.",
     icon: ICONS.fast,
   },
   {
