@@ -36,20 +36,15 @@ export default function ContactForm() {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
-          subject: `New ${data.inquiryType} inquiry — ${data.subject}`,
-          from_name: `EV ChargeNow Website — ${data.name || "Visitor"}`,
-          ...data,
-        }),
+        body: JSON.stringify(data),
       });
       const body = await res.json().catch(() => ({}));
       if (!res.ok || !body.success) {
         throw new Error(
-          body.message || "We couldn't send your message right now. Please try again."
+          body.error || "We couldn't send your message right now. Please try again."
         );
       }
       setStatus("success");
