@@ -10,10 +10,10 @@ export default function Header({ floating = false }: Props) {
       <div className="container main-nav-inner">
         <Link href="/" className="brand" aria-label={brand.name}>
           <Image
-            src="/logo.jpg"
+            src="/sun-symbol.png"
             alt={brand.name}
-            width={160}
-            height={50}
+            width={48}
+            height={48}
             priority
           />
         </Link>

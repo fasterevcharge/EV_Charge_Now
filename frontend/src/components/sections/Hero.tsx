@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import VideoBackground from "./VideoBackground";
@@ -27,26 +28,15 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="word">FA</span>
-          <motion.span
-            className="bolt-letter"
-            initial={{ opacity: 0, rotate: -30, scale: 0.6 }}
-            animate={{ opacity: 1, rotate: 0, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
-            ⚡
-          </motion.span>
-          <span className="word">TER</span>
+          <Image
+            src="/wordmark.png"
+            alt={brand.name}
+            width={1600}
+            height={267}
+            priority
+            className="wordmark-img"
+          />
         </motion.h1>
-
-        <motion.p
-          className="hero-tagline"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
-        >
-          {brand.tagline}
-        </motion.p>
 
         <motion.div
           className="hero-headline-wrap"
