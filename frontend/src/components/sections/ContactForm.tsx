@@ -116,22 +116,22 @@ export default function ContactForm() {
       <div className="intake-row">
         <label className="intake-field">
           <span className="intake-label">Name *</span>
-          <input name="name" type="text" required />
+          <input name="name" type="text" required autoComplete="name" />
         </label>
         <label className="intake-field">
           <span className="intake-label">Email *</span>
-          <input name="email" type="email" required />
+          <input name="email" type="email" required autoComplete="email" />
         </label>
       </div>
 
       <div className="intake-row">
         <label className="intake-field">
           <span className="intake-label">Phone Number (Optional)</span>
-          <input name="phone" type="tel" />
+          <input name="phone" type="tel" autoComplete="tel" />
         </label>
         <label className="intake-field">
           <span className="intake-label">Property / Company Name (Optional)</span>
-          <input name="company" type="text" />
+          <input name="company" type="text" autoComplete="organization" />
         </label>
       </div>
 
