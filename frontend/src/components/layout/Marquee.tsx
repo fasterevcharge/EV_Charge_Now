@@ -14,7 +14,7 @@ export default function Marquee() {
       >
         {loop.map((t, i) => (
           <span key={i} className="marquee-item">
-            {t} <span className="marquee-bolt">⚡</span>
+            {t} <span className="marquee-bolt" aria-hidden="true" />
           </span>
         ))}
       </motion.div>

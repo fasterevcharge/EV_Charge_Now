@@ -77,7 +77,7 @@ const PILLARS: FeatureItem[] = [
 export default function Pillars() {
   return (
     <FeatureGrid
-      eyebrow="⚡ Four Pillars"
+      eyebrow="Four Pillars"
       title="Built on what drivers actually need."
       items={PILLARS}
       columns={4}

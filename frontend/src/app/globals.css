@@ -36,9 +36,9 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Header ---------- */
 .site-header {
-  background: rgba(5, 5, 5, 0.5);
+  background: rgba(8, 8, 9, 0.72);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(18px) saturate(140%);
   position: sticky; top: 0; z-index: 50;
 }
 .site-header.floating {
@@ -51,9 +51,11 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; justify-content: space-between;
   height: 76px; gap: 24px;
 }
+.brand { display: inline-flex; align-items: center; }
 .brand img {
-  height: 38px; width: auto; object-fit: contain;
-  filter: invert(1) brightness(2);
+  height: 42px; width: auto; object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 .primary-nav { display: flex; gap: 28px; }
 .primary-nav a {
@@ -196,7 +198,10 @@ img { max-width: 100%; display: block; }
   font-weight: 900; font-size: 18px; letter-spacing: 0.12em;
 }
 .marquee-item { display: inline-flex; align-items: center; gap: 16px; }
-.marquee-bolt { font-size: 22px; }
+.marquee-bolt {
+  width: 6px; height: 6px; border-radius: 999px;
+  background: var(--accent); display: inline-block;
+}
 
 /* ---------- Sections ---------- */
 .section { padding: 140px 0; position: relative; }
@@ -333,7 +338,9 @@ h2.reveal-text {
   color: var(--text-2); font-size: 16px;
 }
 .bullet-list li::before {
-  content: "⚡"; position: absolute; left: 0; top: 0; color: var(--accent);
+  content: ""; position: absolute; left: 0; top: 9px;
+  width: 7px; height: 7px; border-radius: 2px;
+  background: var(--accent); transform: rotate(45deg);
 }
 
 /* Quote */
@@ -705,6 +712,7 @@ h2.reveal-text {
 
 /* ---------- Content block ---------- */
 .content-block.align-center { text-align: center; }
+.content-block.align-center p.reveal-text { max-width: 620px; margin-left: auto; margin-right: auto; }
 .content-block.align-center .bullet-list li { text-align: left; max-width: 480px; margin-left: auto; margin-right: auto; }
 .story-paragraphs { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
 .story-paragraphs p { color: var(--text-2); font-size: 17px; }

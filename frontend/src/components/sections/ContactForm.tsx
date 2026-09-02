@@ -59,7 +59,7 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="intake-success">
-        <span className="eyebrow">⚡ Message sent</span>
+        <span className="eyebrow">Message sent</span>
         <h2>Thanks — we&apos;ll be in touch.</h2>
         <p>
           Your message has reached the EV ChargeNow team. We typically respond

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import PageShell from "@/components/layout/PageShell";
 import PageHero from "@/components/sections/PageHero";
+import ContactForm from "@/components/sections/ContactForm";
 import { contact } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -18,28 +20,10 @@ export default function ContactPage() {
       />
 
       <section className="section dark">
-        <div className="container">
-          <div className="contact-grid">
-            {contact.cards.map((card) => (
-              <div key={card.title} className="contact-card">
-                <h3>{card.title}</h3>
-                <p>{card.body}</p>
-                <a href={card.cta.href} className="cta-magnetic small">
-                  {card.cta.label}
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <div className="contact-email-band">
-            <span className="eyebrow">⚡ Direct line</span>
-            <p className="contact-email-prompt">
-              Send us a message and our team will get back to you.
-            </p>
-            <a href="/get-in-touch" className="cta-magnetic">
-              Get in Touch
-            </a>
-          </div>
+        <div className="container narrow">
+          <Suspense fallback={null}>
+            <ContactForm />
+          </Suspense>
         </div>
       </section>
     </PageShell>
