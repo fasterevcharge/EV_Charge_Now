@@ -62,7 +62,7 @@ export default function ContactForm() {
         <span className="eyebrow">Message sent</span>
         <h2>Thanks — we&apos;ll be in touch.</h2>
         <p>
-          Your message has reached the EV ChargeNow team. We typically respond
+          Your message has reached the Faster EV ChargeNow team. We typically respond
           within one to two business days.
         </p>
         <button

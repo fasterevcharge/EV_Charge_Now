@@ -1,11 +1,11 @@
 /**
  * Single source of truth for all site copy.
  * Edit this file to change any text — pages and sections read from here.
- * Content based on EV ChargeNow Website Copy + Content Brief PDFs.
+ * Content based on Faster EV ChargeNow Website Copy + Content Brief PDFs.
  */
 
 export const brand = {
-  name: "EV ChargeNow",
+  name: "Faster EV ChargeNow",
   wordmark: "FASTER",        // visual wordmark in hero
   tagline: "EV CHARGE NOW",  // wordmark subtitle
   email: "info@fasterevchargenow.com",
@@ -26,7 +26,7 @@ export const home = {
     eyebrow: "Everyday Destinations",
     title: "Charging Infrastructure for Everyday Destinations.",
     subtitle:
-      "EV ChargeNow delivers fast, reliable electric vehicle charging where people already live, work, shop, and gather — transforming underutilized parking assets into valuable community infrastructure.",
+      "Faster EV ChargeNow delivers fast, reliable electric vehicle charging where people already live, work, shop, and gather — transforming underutilized parking assets into valuable community infrastructure.",
     primaryCta: { label: "Partner With Us", href: "/property-owners" },
   },
   simple: {
@@ -57,7 +57,7 @@ export const home = {
       },
       {
         title: "Property Owners",
-        body: "Turn underutilized parking into revenue-generating infrastructure.",
+        body: "Turn underutilized parking into revenue-generating infrastructure — at zero cost to you.",
         href: "/property-owners",
         cta: "For Property Owners →",
       },
@@ -67,13 +67,13 @@ export const home = {
     eyebrow: "Our Mission",
     title: "Make charging a seamless part of everyday life.",
     body:
-      "EV ChargeNow exists to make electric vehicle charging a seamless part of everyday life. By building fast, reliable charging destinations where people already live, work, shop, and gather, we serve drivers, strengthen local businesses, and help communities prepare for an electric future.",
+      "Faster EV ChargeNow exists to make electric vehicle charging a seamless part of everyday life. By building fast, reliable charging destinations where people already live, work, shop, and gather, we serve drivers, strengthen local businesses, and help communities prepare for an electric future.",
   },
   vision: {
     eyebrow: "Our Vision",
     title: "Charging as intuitive and accessible as parking.",
     body:
-      "We envision a future where charging is as intuitive and accessible as parking. Through a growing network of community-centered charging destinations, EV ChargeNow is transforming underutilized spaces into valuable infrastructure that powers mobility and supports local economies.",
+      "We envision a future where charging is as intuitive and accessible as parking. Through a growing network of community-centered charging destinations, Faster EV ChargeNow is transforming underutilized spaces into valuable infrastructure that powers mobility and supports local economies.",
   },
 } as const;
 
@@ -85,13 +85,13 @@ export const drivers = {
     eyebrow: "For Drivers",
     title: "Fast, Convenient Charging.",
     subtitle:
-      "Charge your vehicle while you shop, dine, work, or run errands. EV ChargeNow makes charging a natural part of your day.",
+      "Charge your vehicle while you shop, dine, work, or run errands. Faster EV ChargeNow makes charging a natural part of your day.",
   },
   whereLife: {
     eyebrow: "Where life happens",
     title: "Charge Where Your Life Happens.",
     body:
-      "Whether you're grabbing groceries, meeting friends, visiting local businesses, or commuting to work, EV ChargeNow allows you to recharge while doing the things you already planned to do.",
+      "Whether you're grabbing groceries, meeting friends, visiting local businesses, or commuting to work, Faster EV ChargeNow allows you to recharge while doing the things you already planned to do.",
   },
   fast: {
     eyebrow: "Fast Charging",
@@ -147,12 +147,17 @@ export const drivers = {
 export const propertyOwners = {
   hero: {
     eyebrow: "For Property Owners",
-    title: "Turn Parking Into Revenue Infrastructure.",
-    subtitle:
-      "EV ChargeNow helps property owners convert underutilized parking assets into long-term revenue opportunities while enhancing property attractiveness for tenants and visitors.",
+    title: "Turn idle parking into a revenue stream — we install and operate the chargers, you collect an ongoing share of what they earn.",
+    subtitle: "Simple for you. Fully managed by us.",
     primaryCta: { label: "Partner With Us", href: "/get-in-touch?type=Property+Owner+%26+Site+Host+Partnership" },
   },
   benefits: [
+    {
+      eyebrow: "How It Works",
+      title: "Zero Cost to You.",
+      body:
+        "Faster EV ChargeNow funds and installs 100% of the design, permitting, construction, and equipment — you contribute the parking space. In return, you receive an ongoing share of the charging revenue, with no maintenance, staffing, or day-to-day responsibility on your end.",
+    },
     {
       eyebrow: "New Revenue",
       title: "Generate New Revenue From Existing Assets.",
@@ -163,7 +168,7 @@ export const propertyOwners = {
       eyebrow: "Foot Traffic",
       title: "Increase Foot Traffic and Dwell Time.",
       body:
-        "Drivers typically remain on-site while charging, creating additional opportunities for engagement with nearby businesses and amenities.",
+        "Drivers typically remain on-site while charging, creating additional opportunities for engagement with nearby businesses and amenities. DC fast-charging sessions typically run 20–40 minutes — time drivers spend at your property rather than elsewhere.",
       bullets: [
         "Increased retail activity.",
         "Greater restaurant and service usage.",
@@ -175,7 +180,7 @@ export const propertyOwners = {
       eyebrow: "Property Appeal",
       title: "Enhance Property Appeal.",
       body:
-        "Electric vehicle charging infrastructure aligns properties with evolving tenant and consumer expectations.",
+        "Electric vehicle charging infrastructure aligns properties with evolving tenant and consumer expectations. Charging amenities are increasingly requested by national retail and restaurant tenants during lease negotiations — making EV infrastructure a competitive point in tenant retention, not just a sustainability checkbox.",
       bullets: [
         "Sustainability readiness.",
         "Modern asset positioning.",
@@ -183,18 +188,24 @@ export const propertyOwners = {
         "Increased property appeal.",
       ],
     },
+    {
+      eyebrow: "Built for Speed",
+      title: "The Fastest Charging Available.",
+      body:
+        "Our DC charging stations are 360 kW, among the highest-powered charging available today — keeping sessions short (20–40 minutes) and turnover high. Industry research (JD Power's 2026 EV Experience study) finds that charging speed is one of the most common frustrations EV drivers report, and that satisfaction rises sharply with newer, faster networks.",
+    },
   ],
   partnership: {
     eyebrow: "Flexible Partnership",
     title: "A Flexible Partnership Model.",
     body:
-      "Every property is different. EV ChargeNow works with property owners to develop partnership structures that align with site characteristics, usage patterns, and long-term goals. Property owners may benefit from charging activity, increased visitation, and new opportunities created through electric vehicle infrastructure.",
+      "Charger count, site design, and revenue terms are built around your property, not a standard template — funded, installed, and operated by us, with no cost or operating burden on your end.",
   },
   future: {
     eyebrow: "Future-Ready",
     title: "Future-Ready Infrastructure.",
     body:
-      "As electric vehicle adoption continues to grow, charging infrastructure helps properties remain relevant, competitive, and prepared for the future of transportation.",
+      "California has set a goal of 100% zero-emission vehicle sales by 2035, with major automakers making parallel commitments to go all-electric on a similar timeline. Properties with charging infrastructure in place today are positioned ahead of that curve — turning underutilized parking into infrastructure that serves drivers, supports businesses, and creates long-term value.",
   },
   closing:
     "Transform underutilized parking into infrastructure that serves drivers, supports businesses, and creates long-term value.",
@@ -205,30 +216,29 @@ export const propertyOwners = {
 // -----------------------------------------------------------------------------
 export const about = {
   hero: {
-    eyebrow: "About EV ChargeNow",
+    eyebrow: "About Faster EV ChargeNow",
     title: "Building Infrastructure for Everyday Life.",
     subtitle:
-      "EV ChargeNow is helping communities prepare for an electric future by bringing fast, reliable charging to the places people already visit every day.",
+      "Faster EV ChargeNow brings fast, reliable EV charging to the places people already visit every day — creating a better charging experience for drivers, and a new revenue opportunity for the properties that host it.",
   },
   story: {
     eyebrow: "Our Story",
     title: "Charging should be as accessible as parking.",
     paragraphs: [
-      "Electric vehicle adoption is accelerating, but charging infrastructure has not always kept pace with how people actually move through their daily lives.",
-      "EV ChargeNow was founded on a simple belief: charging should be as accessible and intuitive as parking.",
-      "By developing fast-charging destinations in places people already live, work, shop, and gather, we create value for drivers, support local businesses, and help communities transition toward a more connected transportation future.",
+      "Electric vehicle adoption is accelerating, but charging infrastructure hasn't always kept pace with how people actually move through their daily lives. Founded in 2021, Faster EV ChargeNow was built on a simple belief: charging should be as accessible and intuitive as parking — and fast enough that it doesn't cost people their afternoon. Our chargers deliver up to 360 kW, among the fastest speeds available today.",
+      "By developing fast-charging destinations in the places people already live, work, shop, and gather, we create a better experience for drivers and a new revenue stream for the property owners who host us.",
     ],
   },
   mission: {
     eyebrow: "Mission",
-    title: "Make EV charging a seamless part of everyday life.",
-    body: "To make electric vehicle charging a seamless part of everyday life.",
+    title: "Fast charging for drivers. New revenue for the properties that host it.",
+    body: "One network, built for both.",
   },
   vision: {
     eyebrow: "Vision",
     title: "A network that powers communities.",
     body:
-      "To build a network of community-centered charging destinations that powers mobility, supports local economies, and prepares communities for an electrified future.",
+      "California has set a goal of 100% zero-emission vehicle sales by 2035 — we're building the charging network that goal depends on. Our vision is a growing network of charging destinations that gives drivers power when they need it and gives the properties that host us a lasting source of revenue — powering mobility and local economies together.",
   },
 } as const;
 
@@ -240,7 +250,7 @@ export const contact = {
     eyebrow: "Get in touch",
     title: "Let's Build the Future of Charging Together.",
     subtitle:
-      "Whether you're interested in hosting charging infrastructure, exploring partnership opportunities, or learning more about EV ChargeNow, we'd love to hear from you.",
+      "Whether you're interested in hosting charging infrastructure, exploring partnership opportunities, or learning more about Faster EV ChargeNow, we'd love to hear from you.",
   },
   cards: [
     {
@@ -260,7 +270,7 @@ export const contact = {
     },
     {
       title: "Business Partnerships",
-      body: "Exploring investment, strategic partnership, or development opportunities with EV ChargeNow? Let's connect.",
+      body: "Exploring investment, strategic partnership, or development opportunities with Faster EV ChargeNow? Let's connect.",
       cta: { label: "Start a Conversation", href: "/get-in-touch?type=Investor+%26+Strategic+Partnership" },
     },
     {
@@ -270,7 +280,7 @@ export const contact = {
     },
     {
       title: "General Inquiries",
-      body: "Questions about EV ChargeNow, future locations, or anything else? We'll get back to you.",
+      body: "Questions about Faster EV ChargeNow, future locations, or anything else? We'll get back to you.",
       cta: { label: "Contact Our Team", href: "/get-in-touch?type=General+Question" },
     },
   ],
@@ -285,7 +295,7 @@ export const inquiry = {
     eyebrow: "Get in touch",
     title: "How Can We Help?",
     subtitle:
-      "We're here to help. Whether you're looking to host EV charging, need support, or want to learn more about EV ChargeNow, we'd love to hear from you.",
+      "We're here to help. Whether you're looking to host EV charging, need support, or want to learn more about Faster EV ChargeNow, we'd love to hear from you.",
   },
   types: [
     "Property Owner & Site Host Partnership",

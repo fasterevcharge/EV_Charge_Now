@@ -8,14 +8,13 @@ import Marquee from "@/components/layout/Marquee";
 import { propertyOwners } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Property Owners — EV ChargeNow",
+  title: "Property Owners — Faster EV ChargeNow",
   description: propertyOwners.hero.subtitle,
 };
 
 const IMAGES = ["/solar-canopy.png", "/station-signage.png", "/station-night.png"];
 
 export default function PropertyOwnersPage() {
-  const [revenue, foot, appeal] = propertyOwners.benefits;
   return (
     <PageShell>
       <PageHero
@@ -27,38 +26,20 @@ export default function PropertyOwnersPage() {
         backgroundAlt="Solar canopy with EV chargers"
       />
 
-      <SplitSection
-        image={{ src: IMAGES[0], alt: "Solar canopy charging" }}
-      >
-        <ContentBlock
-          eyebrow={revenue.eyebrow}
-          title={revenue.title}
-          body={revenue.body}
-        />
-      </SplitSection>
-
-      <SplitSection
-        reverse
-        image={{ src: IMAGES[1], alt: "Drivers engaging with stations" }}
-      >
-        <ContentBlock
-          eyebrow={foot.eyebrow}
-          title={foot.title}
-          body={foot.body}
-          bullets={foot.bullets}
-        />
-      </SplitSection>
-
-      <SplitSection
-        image={{ src: IMAGES[2], alt: "Branded modern charging hub" }}
-      >
-        <ContentBlock
-          eyebrow={appeal.eyebrow}
-          title={appeal.title}
-          body={appeal.body}
-          bullets={appeal.bullets}
-        />
-      </SplitSection>
+      {propertyOwners.benefits.map((benefit, i) => (
+        <SplitSection
+          key={benefit.eyebrow}
+          reverse={i % 2 === 1}
+          image={{ src: IMAGES[i % IMAGES.length], alt: benefit.title }}
+        >
+          <ContentBlock
+            eyebrow={benefit.eyebrow}
+            title={benefit.title}
+            body={benefit.body}
+            bullets={"bullets" in benefit ? benefit.bullets : undefined}
+          />
+        </SplitSection>
+      ))}
 
       <section className="section dark" id="partnership">
         <div className="container narrow">

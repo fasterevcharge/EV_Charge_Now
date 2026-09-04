@@ -4,7 +4,7 @@ import { contact } from "@/content/site";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const FROM = "EV ChargeNow Website <noreply@fasterevchargenow.com>";
+const FROM = "Faster EV ChargeNow Website <noreply@fasterevchargenow.com>";
 
 function esc(value: string) {
   return value

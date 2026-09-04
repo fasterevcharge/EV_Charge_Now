@@ -96,7 +96,7 @@ export default function HomePage() {
 
       <CTABand
         title="Ready to charge faster?"
-        body="Whether you drive, host, or partner — EV ChargeNow makes it simple."
+        body="Whether you drive, host, or partner — Faster EV ChargeNow makes it simple."
         cta={{ label: "Get in Touch", href: "/get-in-touch" }}
       />
 

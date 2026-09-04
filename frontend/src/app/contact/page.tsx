@@ -6,7 +6,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import { contact } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Contact — EV ChargeNow",
+  title: "Contact — Faster EV ChargeNow",
   description: contact.hero.subtitle,
 };
 

@@ -59,7 +59,7 @@ const PILLARS: FeatureItem[] = [
   },
   {
     title: "Find Stations",
-    body: "Locate EV ChargeNow destinations in the places you already visit.",
+    body: "Locate Faster EV ChargeNow destinations in the places you already visit.",
     icon: ICONS.pin,
   },
   {

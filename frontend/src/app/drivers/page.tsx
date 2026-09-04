@@ -9,7 +9,7 @@ import Marquee from "@/components/layout/Marquee";
 import { drivers } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Drivers — EV ChargeNow",
+  title: "Drivers — Faster EV ChargeNow",
   description: drivers.hero.subtitle,
 };
 
@@ -21,7 +21,7 @@ export default function DriversPage() {
         title={drivers.hero.title}
         subtitle={drivers.hero.subtitle}
         backgroundImage="/station-night.png"
-        backgroundAlt="EV ChargeNow station at night"
+        backgroundAlt="Faster EV ChargeNow station at night"
       />
 
       <SplitSection

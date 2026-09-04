@@ -3,7 +3,7 @@ import { brand, nav, contact } from "@/content/site";
 
 const columns = [
   {
-    title: "EV ChargeNow",
+    title: "Faster EV ChargeNow",
     links: nav.map((n) => ({ label: n.label, href: n.href })),
   },
   {

@@ -8,7 +8,7 @@ import RevealText from "@/components/motion/RevealText";
 import { about } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "About — EV ChargeNow",
+  title: "About — Faster EV ChargeNow",
   description: about.hero.subtitle,
 };
 

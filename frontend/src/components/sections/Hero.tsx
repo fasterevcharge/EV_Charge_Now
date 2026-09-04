@@ -61,7 +61,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div className="hero-bottom" style={{ opacity }}>
-        <span className="est">EST. 2026</span>
+        <span className="est">EST. 2021</span>
         <span className="scroll-cue">
           SCROLL <span className="arrow">↓</span>
         </span>
